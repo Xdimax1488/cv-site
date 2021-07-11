@@ -1,0 +1,23 @@
+{
+  "name": "cv-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sccs": "node-sass -w base_scss/mean.scss -o css/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xdimax1488/cv-site.git"
+  },
+  "author": "Kurinniy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xdimax1488/cv-site/issues"
+  },
+  "homepage": "https://github.com/Xdimax1488/cv-site#readme",
+  "dependencies": {
+    "node-sass": "^6.0.1"
+  }
+}
