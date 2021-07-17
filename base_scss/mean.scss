@@ -1,3 +1,21 @@
-body{
-    margin: 0;
+@import "vars";
+html {
+  font-size: 15px;
 }
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: $black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@import "conteiner";
+@import "header";
+@import "user";
+@import "nav";
