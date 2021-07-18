@@ -8,7 +8,12 @@ body {
   font-size: 1rem;
   color: $black;
 }
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -25,3 +30,10 @@ h1,h2,h3,h4,h5,h6{
 @import "intro";
 @import "social";
 @import "btn";
+@import "works";
+@import "work";
+@import "portfolio";
+
+
+
+@import "helper"
