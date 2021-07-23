@@ -146,7 +146,6 @@ h6 {
   display: inline-block;
   vertical-align: top;
   padding: 1.05rem 1.7rem;
-  min-width: 170px;
   border: 1px solid #6a696b;
   border-radius: 30px;
   cursor: pointer;
@@ -168,12 +167,13 @@ h6 {
   .btn + .btn {
     margin-left: 1rem; }
   .btn--sm {
+    min-width: 0;
     font-size: .9rem;
     font-weight: 700;
     border-width: 2px; }
 
 .works {
-  padding: 2.8rem 0; }
+  margin: 2.8rem 0; }
 
 .works__nav {
   display: flex;
@@ -226,6 +226,94 @@ h6 {
 .portfolio__col {
   width: 33.3333%;
   padding: 1rem; }
+
+.about {
+  margin: 8.4rem 0; }
+
+.about__inner {
+  display: flex;
+  max-width: 1090px; }
+
+.about__pfoto {
+  width: 50%; }
+  .about__pfoto img {
+    display: block;
+    max-width: 100%;
+    height: auto; }
+
+.about__content {
+  width: 50%;
+  padding-left: 3.2rem;
+  margin-top: 2rem; }
+
+.about__tittle {
+  font-size: 3rem;
+  color: #2b2a2c;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.about__bigtittle {
+  position: relative;
+  left: -10px;
+  font-size: 6.1rem;
+  color: rgba(43, 42, 44, 0.15);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1.4rem; }
+
+.about__text {
+  line-height: 2;
+  font-size: 0.8rem;
+  color: #6a696b;
+  font-weight: 300;
+  margin-bottom: 2.8rem; }
+
+.footer {
+  background-color: #2b2a2c;
+  padding: 1rem 0; }
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between; }
+
+.footer__credits {
+  display: flex;
+  align-items: center; }
+
+.footer__copyright {
+  margin-right: 1rem;
+  padding-right: .8rem;
+  font-size: 1.3rem;
+  color: #BBBBCC;
+  border-right: 1px solid rgba(187, 187, 204, 0.3); }
+
+.footer__social {
+  display: flex;
+  align-items: center; }
+  .footer__social a {
+    text-decoration: none;
+    margin-right: .8rem; }
+
+.footer__nav {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center; }
+  .footer__nav-link {
+    margin-left: 1.5rem;
+    color: #BBBBCC;
+    text-decoration: none; }
+    .footer__nav-link:hover {
+      text-decoration: underline; }
+    .footer__nav-link--btn {
+      padding: .5rem 1.4rem;
+      border-radius: 20px;
+      border: 1px solid #8d8d8e; }
+      .footer__nav-link--btn:hover {
+        text-decoration: none;
+        background-color: #BBBBCC;
+        border-color: #BBBBCC;
+        color: #2b2a2c; }
 
 .text-centr {
   text-align: center; }

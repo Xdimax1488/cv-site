@@ -1,0 +1,45 @@
+.about {
+  margin: 8.4rem 0;
+}
+
+.about__inner {
+  display: flex;
+  max-width: 1090px;
+}
+.about__pfoto {
+  width: 50%;
+  & img{
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+  }
+}
+.about__content {
+  width: 50%;
+  padding-left: 3.2rem;
+  margin-top: 2rem;
+}
+.about__tittle {
+  font-size: 3rem;
+  color: $black;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.about__bigtittle {
+  position: relative;
+  left: -10px;
+  font-size: 6.1rem;
+  color: rgba($black, $alpha: 0.15);
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 1.4rem;
+}
+.about__text {
+  line-height: 2;
+  font-size: 0.8rem;
+  color: $gray;
+  font-weight: 300;
+  margin-bottom: 2.8rem;
+}
