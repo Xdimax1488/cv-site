@@ -7,6 +7,10 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1rem;
   color: $black;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 h1,
 h2,
@@ -35,5 +39,7 @@ h6 {
 @import "portfolio";
 @import "about";
 @import "footer";
+@import "modal";
+@import "modal-work";
 
 @import "helper";
