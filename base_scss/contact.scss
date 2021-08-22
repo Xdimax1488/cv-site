@@ -1,0 +1,39 @@
+.contact {
+  display: flex;
+}
+.contact__left {
+  width: 47%;
+  padding: 2rem;
+}
+.contact__rigth {
+  width: 53%;
+}
+.contac__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: $black;
+  font-weight: 700;
+}
+.contac__subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: $black;
+}
+.contact__info {
+  margin: 2rem 0 3rem 0;
+  padding: 0;
+  list-style: none;
+  & img {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem;
+  }
+}
+.contact__info--item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

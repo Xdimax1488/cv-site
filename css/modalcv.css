@@ -1,0 +1,48 @@
+.modalcv {
+  display: flex; }
+
+.modalcv__content {
+  width: 70%;
+  padding: 5rem 1rem 2rem 5rem; }
+
+.modalcv__content--title {
+  font-size: 3rem; }
+
+.modalcv_content--titlemin {
+  margin-bottom: 6rem; }
+
+.modalcv__content--title {
+  display: flex;
+  align-items: center; }
+  .modalcv__content--title h1 {
+    font-size: 2rem; }
+
+.modalcv__content--h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem; }
+
+.modalcv__info {
+  width: 30%;
+  padding: 15rem 1rem; }
+
+.modalcv__info--title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; }
+
+.modalcv__info--h1 {
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+.modalcv__infoo--img {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 3px;
+  background-color: black; }
+
+.language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }

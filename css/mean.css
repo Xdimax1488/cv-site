@@ -194,7 +194,7 @@ h6 {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 0 4px rgba(43, 42, 44, 0.25);
-  transition: box-shadow .2s linear; }
+  transition: box-shadow 0.2s linear; }
   .work:hover {
     box-shadow: 0 0 25px rgba(43, 42, 44, 0.25); }
 
@@ -207,8 +207,8 @@ h6 {
   padding: 1rem 0.8rem; }
 
 .work__cat {
-  margin-bottom: .5rem;
-  font-size: .8rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
   color: #2b2a2c;
   text-transform: uppercase; }
 
@@ -320,7 +320,7 @@ h6 {
 .modal {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   padding: 1rem;
   overflow: auto;
   background-color: rgba(43, 42, 44, 0.8);
@@ -328,6 +328,8 @@ h6 {
   top: 0;
   left: 0;
   z-index: 1000; }
+  .modal.show {
+    display: flex; }
 
 .modal__dialog {
   width: 100%;
@@ -335,6 +337,8 @@ h6 {
   margin: auto;
   position: relative;
   background-color: #ffffff; }
+  .modal__dialog--sm {
+    max-width: 900px; }
 
 .model__close {
   width: 34px;
@@ -416,5 +420,149 @@ h6 {
   text-transform: uppercase;
   cursor: pointer; }
 
+.modalcv {
+  display: flex; }
+
+.modalcv__content {
+  width: 70%;
+  padding: 5rem 1rem 2rem 5rem; }
+
+.modalcv__content--title {
+  font-size: 3rem;
+  margin-bottom: 1rem; }
+
+.modalcv_content--titlemin {
+  font-size: 2rem;
+  margin-bottom: 5rem; }
+
+.modalcv__content--info {
+  position: relative;
+  margin-left: 3rem; }
+  .modalcv__content--info::before {
+    content: "2009 - 2014rr";
+    position: absolute;
+    left: -100px;
+    top: 325px; }
+  .modalcv__content--info::after {
+    content: "2020 - 2021rr";
+    position: absolute;
+    left: -100px;
+    top: 467px; }
+  .modalcv__content--info p {
+    margin-left: 2.7rem; }
+
+.modalcv__content--title {
+  display: flex;
+  align-items: center; }
+  .modalcv__content--title h1 {
+    font-size: 2rem; }
+
+.modalcv__content--h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-left: 2.7rem; }
+
+.modalcv__info {
+  width: 30%;
+  padding: 15rem 2rem;
+  margin-top: 2rem; }
+
+.modalcv__info--title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; }
+
+.modalcv__info--h1 {
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+.modalcv__infoo--img,
+.modalcv__content--img {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  padding: 3px;
+  background-color: #2b2a2c;
+  margin-right: 0.5rem; }
+
+.language {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.contact {
+  display: flex; }
+
+.contact__left {
+  width: 47%;
+  padding: 2rem; }
+
+.contact__rigth {
+  width: 53%; }
+
+.contac__title {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #2b2a2c;
+  font-weight: 700; }
+
+.contac__subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #2b2a2c; }
+
+.contact__info {
+  margin: 2rem 0 3rem 0;
+  padding: 0;
+  list-style: none; }
+  .contact__info img {
+    width: 20px;
+    height: 20px;
+    margin-right: 1rem; }
+
+.contact__info--item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem; }
+  .contact__info--item:last-child {
+    margin-bottom: 0; }
+
+.form__grup {
+  margin-bottom: 2rem; }
+
+.form__label {
+  display: inline-block;
+  margin-bottom: 0.6rem;
+  font-size: 0.8rem;
+  color: #2b2a2c;
+  font-weight: 700; }
+
+.form__input,
+.form__textarea {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 1.8rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  border: 1px solid rgba(106, 105, 107, 0.3);
+  border-radius: 2rem;
+  color: #2b2a2c; }
+  .form__input:focus,
+  .form__textarea:focus {
+    outline: none;
+    border-color: royalblue; }
+
+.form__textarea {
+  height: 200px;
+  resize: none; }
+
+.text-right {
+  text-align: right; }
+
 .text-centr {
   text-align: center; }
+
+.hide {
+  display: none; }

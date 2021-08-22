@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 
@@ -25,11 +26,11 @@
                     </div>
                 </div>
                 <nav class="nav">
-                    <a href="#" class="nav__link">work</a>
-                    <a href="#" class="nav__link">about me</a>
+                    <a href="#works" class="nav__link">work</a>
+                    <a href="#about" class="nav__link">about me</a>
                     <a href="#" class="nav__link">blog</a>
                     <a href="#" class="nav__link">contact</a>
-                    <a href="#" class="nav__link nav__link--btn">hire me</a>
+                    <a href="#" class="nav__link nav__link--btn" data-modal="#modal_hire_me">hire me</a>
                 </nav>
 
             </div>
@@ -63,8 +64,8 @@
                         </a>
 
                     </div>
-                    <a href="#" class="btn">hier me</a>
-                    <button class="btn" type="button">see me resume</button>
+                    <a href="#" class="btn" data-modal="#modal_hire_me">hier me</a>
+                    <button class="btn" type="button" data-modal="#modal_resume">see me resume</button>
                 </div>
                 <img src="images/intro.jpeg" alt="" class="intro__photo">
             </div>
@@ -73,20 +74,22 @@
 
 
     <!--works-->
-    <div class="works">
+    <div class="works" id="works">
         <div class="conteiner">
             <div class="works__nav">
-                <a href="#" class="works__nav-link">all</a>
-                <a href="#" class="works__nav-link">App</a>
-                <a href="#" class="works__nav-link">Websites</a>
-                <a href="#" class="works__nav-link">interection</a>
+                <a href="#" class="works__nav-link" data-filter="all">all</a>
+                <a href="#" class="works__nav-link" data-filter="app">App</a>
+                <a href="#" class="works__nav-link" data-filter="website">Websites</a>
+                <a href="#" class="works__nav-link" data-filter="interection">interection</a>
             </div>
-            <div class="portfolio">
-                <div class="portfolio__col">
-                    <div class="work">
+
+
+            <div class="portfolio" id="portfolio">
+                <div class="portfolio__col" data-cat="app">
+                    <div class="work" data-modal="#modal_prodject_1">
                         <img class="work__img" src="images/Obszar-roboczy-1-370x300.jpg" alt="">
                         <div class="work__content">
-                            <div class="work__cat">category</div>
+                            <div class="work__cat">app</div>
                             <div class="work__tittle">
                                 Project tittle
                                 <div class="work__date">2020</div>
@@ -94,11 +97,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio__col">
+                <div class="portfolio__col" data-cat="website">
                     <div class="work">
                         <img class="work__img" src="images/Obszar-roboczy-1-370x300.jpg" alt="">
                         <div class="work__content">
-                            <div class="work__cat">category</div>
+                            <div class="work__cat">website</div>
                             <div class="work__tittle">
                                 Project tittle
                                 <div class="work__date">2020</div>
@@ -106,11 +109,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio__col">
+                <div class="portfolio__col" data-cat="interection">
                     <div class="work">
                         <img class="work__img" src="images/Obszar-roboczy-1-370x300.jpg" alt="">
                         <div class="work__content">
-                            <div class="work__cat">category</div>
+                            <div class="work__cat">interection</div>
                             <div class="work__tittle">
                                 Project tittle
                                 <div class="work__date">2020</div>
@@ -128,7 +131,7 @@
 
 
     <!--About-->
-    <section class="about">
+    <section class="about" id="about">
         <div class="conteiner">
             <div class="about__inner">
                 <div class="about__pfoto">
@@ -144,8 +147,8 @@
                     ex. Deserunt, hic! Esse minima dolor maiores? Officia 
                     a magni magnam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus optio, voluptatum ad, enim itaque nihil laborum nostrum pariatur tempore laboriosam culpa illum, nemo sit quod mollitia perspiciatis impedit dolorum natus.</p>
                     </div>
-                    <a href="#" class="btn">hier me</a>
-                    <button class="btn" type="button">see me resume</button>
+                    <a href="#" class="btn" data-modal="#modal_hire_me">hier me</a>
+                    <button class="btn" type="button"data-modal="#modal_resume">see me resume</button>
                 </div>
                 
             </div>
@@ -186,7 +189,7 @@
                     <a href="#" class="footer__nav-link">about me</a>
                     <a href="#" class="footer__nav-link">blog</a>
                     <a href="#" class="footer__nav-link">contact</a>
-                    <a href="#" class="footer__nav-link footer__nav-link--btn ">hire me</a>
+                    <a href="#" class="footer__nav-link footer__nav-link--btn" data-modal="#modal_hire_me" >hire me</a>
                 </nav>
             </div>
 
@@ -195,9 +198,9 @@
 
 
     <!--modals-->
-    <div class="modal">
+    <div class="modal" id="modal_prodject_1">
         <div class="modal__dialog">
-            <button class="model__close" type="button">
+            <button class="model__close" type="button" data-close>
                 <img src="images/close.svg" alt="" width="34px" height="34px">
             </button>
             <div class="modal-work">
@@ -231,6 +234,166 @@
 
         </div>
     </div>
+        
+    
+    
+
+    <!--modal_cv-->
+    <div class="modal" id="modal_resume">
+    <div class="modal__dialog">
+        <button class="model__close" type="button" data-close>
+            <img src="images/close.svg" alt="" width="34px" height="34px">
+        </button>
+        <div class="modalcv">
+            <div class="modalcv__content">
+                <h1 class="modalcv__content--title">Dmytro Kurinnyi</h1>
+                <h3 class="modalcv_content--titlemin">Full Stack Python Developer</h3>
+                <div class="modalcv__content--info">
+                    <div class="modalcv__content--title">
+                        <img src="images/dialog.svg" alt="" class="modalcv__content--img">
+                        <h1>Podsumowanie</h1>
+                    </div>
+                    <p>
+                        Zaangazowany w prace <span class="modalcv__span">junior Pyton Developer</span>
+                        Wiem, jak funkcijonowac w duzym zespole, by razem osiagac zamierzone cele.Celowy,gotowyj
+                        do ciezkiej pracy i zdobywaniu nowej wiedzy, ktora w przyszlosci pozwoli znacznie 
+                        lepiej radzic sobie z obowiazkami.
+                    </p>
+                    <div class="modalcv__content--title">
+                        <img src="images/bag.svg" alt="" class="modalcv__content--img">
+                        <h1>Doswiadczenie</h1>
+                    </div>
+                    <p>Na danyj moment nie mam doswiadczenie w danej branze, ale podczas
+                        szkolen na kursi "Full Stack Python Developer" byly projekty jezyka
+                        najbarziej zblizone do rzeczywistych projektow roboczych
+                    </p>
+                    <div class="modalcv__content--title">
+                        <img src="images/hat.svg" alt="" class="modalcv__content--img">
+                        <h1>Wyksztalcenie</h1>
+                    </div>
+                    <h1 class="modalcv__content--h1">Inzynier,Magistr</h1>
+                    <p>National University of Foot Technology( Narodowy Uniwersytet Technologii Zywnosci),Kijow
+                    </p>
+                    <div class="modalcv__content--title">
+                        <img src="images/kurs.svg" alt="" class="modalcv__content--img">
+                        <h1>Kursy</h1>
+                    </div>
+                    <p>
+                        "Full Stack Python Developer"
+                    </p>
+                </div>
+            </div>
+            <div class="modalcv__info">
+                <div class="modalcv__info--data">
+                    <div class="modalcv__info--title">
+                        <img src="images/man.svg" alt="" class="modalcv__infoo--img">
+                       <h1>Dane osobowe</h1>
+                    </div>
+                    <h1 class="modalcv__info--h1">E-mail</h1>
+                    <p class="modalcv__info--dataemailinfo">dima_kurinnoy@mail.ru</p>
+                    <h1 class="modalcv__info--h1">Numer telefonu</h1>
+                    <p class="modalcv__info--dataemailinfo">+48 575 783 287</p>
+                </div>
+                <div class="madalcv__info--skills">
+                    <div class="modalcv__info--title">
+                        <img src="images/flash.svg" alt="" class="modalcv__infoo--img">
+                       <h1>Umiejetnosci</h1>
+                    </div>
+                    <p class="modal__skills">Komunikatywnosc</p>
+                    <p class="modal__skills">Umientnosc pracy w zespole</p>
+                    <p class="modal__skills">Dobra znajomosc: Python,framework Django,HTML,CSS</p>
+                    <p class="modal__skills">Znajomosc jezyka: JavaScript,framework React</p>
+                </div>
+                <div class="modalcv__info--language">
+                    <div class="modalcv__info--title">
+                        <img src="images/language.svg" alt="" class="modalcv__infoo--img">
+                       <h1>Jezyki obce</h1>
+                    </div>
+                    <div class="language">
+                           <div class="lenguage__title">
+                               <p>Rosyjski</p>
+                               <p>Ukrainski</p>
+                               <p>Angielski</p>
+                           </div>
+                           <div class="lenguage__img">
+                               <div class="lenguage__img--ru">
+                                 <img src="images/full_star.svg" alt="star">
+                                 <img src="images/full_star.svg" alt="star">
+                                 <img src="images/full_star.svg" alt="star">
+                                 <img src="images/full_star.svg" alt="star">
+                                 <img src="images/full_star.svg" alt="star">
+                                </div>
+                                <div class="lenguage__img--ua">
+                                    <img src="images/full_star.svg" alt="star">
+                                    <img src="images/full_star.svg" alt="star">
+                                    <img src="images/full_star.svg" alt="star">
+                                    <img src="images/full_star.svg" alt="star">
+                                    <img src="images/full_star.svg" alt="star">
+                                </div>
+                                <div class="lenguage__img--ua">
+                                    <img src="images/full_star.svg" alt="star">
+                                    <img src="images/full_star.svg" alt="star">
+                                    <img src="images/full_star.svg" alt="star">
+                                    <img src="images/star.svg" alt="star">
+                                    <img src="images/star.svg" alt="star">
+                                </div>
+                            </div>
+                           </div>
+
+                       </div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div><!--modal_cv/-->
+
+      <!--contact-->
+        <div class="modal" id="modal_hire_me" >
+            <div class="modal__dialog modal__dialog--sm">
+                <button class="model__close" type="button" data-close>
+                    <img src="images/close.svg" alt="" width="34px" height="34px">
+                </button>
+                <div class="contact">
+                    <div class="contact__left">
+                        <h3 class="contac__title">Let's talk!</h3>
+                        <div class="contac__subtitle">call me or send me a request</div>
+                        <ul class="contact__info">
+                            <li class="contact__info--item">
+                                <img src="images/phone.svg" alt="">
+                                +48 575 870 237
+                            </li>
+                            <li class="contact__info--item">
+                                <img src="images/e-mail.svg" alt="">
+                                dima_kurinnoy@mail.ru
+                            </li>
+                        </ul>
+                        <form class="form" action="/" method="POST">
+                            <div class="form__grup">
+                               <label class="form__label" for="input-email">E-mail adress</label>
+                               <input type="text" id="input-email" name="input-email" class="form__input" placeholder="E-mail adress">
+                            </div>
+                            <div class="form__grup">
+                                <label class="form__label" for="input-text">Request</label>
+                                <textarea class="form__textarea" name="input-text" id="input-text"  placeholder="type your request" ></textarea>
+                             </div>
+                             <div class="text-right">
+                             <button class="btn" type="submit">SEND</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact__rigth"></div>
+                    
+                </div>
+
+
+                </div>
+                               
+        </div><!--contact/-->
+
+
+        <!--JS-->
+        <script src="js/app.js"></script>
+        <script src="js/skroll.js"></script>
     
 </body>
 </html>
